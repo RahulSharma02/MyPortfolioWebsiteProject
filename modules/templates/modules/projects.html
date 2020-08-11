@@ -1,0 +1,59 @@
+{% extends 'matrialize.html' %}
+{% load static %}
+{% block content %}
+  <div class="contacthead" style="background-color:grey;margin-top:10px;">
+   <h1 class="flow-text white-text text-darken-10 center-align hr" style="font-size:5vh; ">
+     Projects Build</h1>
+   </div>
+<div class="container">
+
+    <div class="section">
+        <!--   Icon Section   -->
+
+        <div class="row">
+            <div class="col s12 m4">
+                <div class=""><img src="https://source.unsplash.com/500x300/?Todo app" alt=""
+                                     class="responsive-img material-boxed hoverable"/>
+                    <h2 class="center light-blue-text"></h2>
+                    <h5 class="center">Activity Manager</h5>
+
+                    <p class="light textinit" >I developed an Activity manager about 6 months ago. It was build using Html, CSS, Bootstrap, Jquery, Javascript,
+                      AJAX and Local Storage was used as database.
+                       It resembles a Todo application and the user can effortlessely ADD, DELETE, UPDATE AND EDIT the enteries.
+                      A calendar Api is also attached to it.
+                      So that the user can easily mark the activities in syncronization with the calendar.
+                     </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class=""><img src="https://source.unsplash.com/500x300/?Quiz app" alt=""
+                                     class="responsive-img material-boxed hoverable"/>
+                    <h2 class="center light-blue-text"></h2>
+                    <h5 class="center">Quiz App</h5>
+
+                    <p class="light textinit">It is developed using ReactJS.It comprises of simple User interface with questions
+                        and four options. Questions are fetched from an api. And at the end of the Quiz, result slide gets displayed with scores.  </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="">  <img src="https://source.unsplash.com/500x300/?Blogs" alt=""
+                                     class="responsive-img material-boxed hoverable"/>
+                    <h2 class="center light-blue-text"></h2>
+                    <h5 class="center">Blog Site</h5>
+
+                    <p class="light textinit">Blog site in which the frontend is build using ReactJs and backend is build using Django.
+                    A user who can an account and is logged in can ADD, DELETE, UPDATE AND EDIT the blogs. Data will then
+                        be stored into the database which is sql lite. Admin can view the database and can alter the data.
+                    This project comprises of proper authentifications and permissions.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+</div>
+
+
+{% endblock content %}

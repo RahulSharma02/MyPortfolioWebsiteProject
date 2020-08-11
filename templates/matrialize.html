@@ -1,0 +1,228 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Website</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!--    google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+
+<!--    font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+     header {
+              background: url("{% static "/images/developerslider.jpg" %}");
+
+         height: 600px;
+              background-size: cover;
+              background-position: center ;
+              min-height: 600px;
+           }
+@media screen and (max-width: 670px){
+    header {
+        min-height:500px;
+}
+.section {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    
+}
+.tabs.indicator{
+    background-color: #1a237e;
+}
+.tabs.tab a:focus,.tabs.tab a:focus.active {
+    background: transparent;
+}
+}
+.textinit{
+font-family: 'Sniglet', cursive;
+font-size:3vh;
+}
+
+.interests{
+font-family: 'Sniglet', cursive;
+font-size:2vh;
+}
+
+nav ul a{
+font-family: 'Sniglet', cursive;
+font-size: 1.25rem;
+color:black;
+}
+.footer_align{
+text-align:center;
+}
+
+.footer_links{
+color:white;
+}
+
+nav a img{
+border:none;
+height:60px;
+postion:relative;
+}
+
+.hr {
+  display: inline-block;
+
+}
+.hr:after {
+  content: '';
+  display: block;
+  border-top: 6px solid white;
+  margin-top: 0.5em;
+}
+.contacthead{
+text-align:center;
+}
+
+
+    </style>
+</head>
+<body>
+<!-- navbar -->
+<header>
+    <nav class="nav-wrapper transparent">
+        <div class="container">
+            <a href="{% url 'home' %}" class="brand-logo"><img src="{% static "images/portfoliologo.png" %}" alt=""></a>
+            <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="">Discover</a></li>
+                <li><a href=""> Blogs</a></li>
+                <li><a href="{% url 'contact' %}">Contact Me</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'admin' %}" class="btn-floating btn-small transparent ">
+                    <i class="fa fa-user"></i>
+                </a></li>
+<!--                <li><a href="" class="btn-floating btn-small transparent ">-->
+<!--                    <i class="fa fa-facebook"></i>-->
+<!--                </a></li>-->
+            </ul>
+            <ul class="sidenav grey lighten-2" id="mobile-menu">
+                <li><a href="">Discover</a></li>
+                <li><a href="">Specialised In</a></li>
+                <li><a href=""> Blogs</a></li>
+                <li><a href="{% url 'contact' %}">Contact Me</a></li>
+                 <li><a href="{% url 'projects' %}">Projects</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+</header>
+
+<!-- Photo-grid -->
+<!--   <section class="container section" id="photos">-->
+<!--    <div class="row">-->
+<!--     <div class="col s12 l4">-->
+<!--         <img src="./img/books.jpg" alt="" class="responsive-img material-boxed">-->
+<!--     </div>  -->
+
+
+{% block content %}
+
+{% endblock content %}
+<footer class="page-footer grey darken-4">
+    <div class="container">
+
+
+
+
+        <div class="row">
+            <div class="col s12 l4 footer_align">
+                <h5>Menu</h5>
+                <a href=""> <p class="footer_links">Terms and conditions.</p></a>
+                <a href="">  <p class="footer_links">Privacy Policy.</p></a>
+                <a href="{% url 'contact' %}"><p class="footer_links">Contact me</p></a>
+
+            </div>
+
+             <div class="col s12 l4 offset-2 footer_align">
+                <h5>Contact</h5>
+                <ul>
+
+                    <li>Email: Rahulfangalia1234@gmail.com</li>
+                    <li>Mobile No: 6005563827</li>
+                    <li>Address: Street no:15, Sector60, Mohali.</li>
+                </ul>
+            </div>
+
+
+
+            <div class="col s12 l4 offset-4 footer_align">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="" class="btn-floating btn-small transparent ">
+                    <i class="fa fa-linkedin-square"></i>
+                </a></li>
+                <li><a href="" class="btn-floating btn-small transparent ">
+                    <i class="fa fa-instagram"></i>
+                </a></li>
+<!--                    <li><a href="" class="btn-floating btn-small transparent ">-->
+<!--                    <i class="fa fa-facebook"></i>-->
+<!--                </a></li>-->
+<!--                    </a></li>-->
+                    <li><a href="" class="btn-floating btn-small transparent ">
+                    <i class="fa fa-github"></i>
+                </a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="footer-copywright grey darken-4">
+            <div class="container center-align" style="padding-bottom:20px">&copy; 2020 Rahul Sharma | All rights
+                reserved
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+   $(document).ready(function(){
+     $('.sidenav').sidenav();
+     $('.material-boxed').materialbox();
+     $('.parallax').parallax();
+     $('.tabs').tabs();
+     $('.datepicker').datepicker({
+         disableWeekends:true
+     })
+   })
+
+
+<!--   var instance = M.Carousel.init({-->
+<!--    fullWidth: true,-->
+<!--    indicators: true-->
+<!--  });-->
+
+<!--  // Or with jQuery-->
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+   
+
+
+</script>
+
+</body>
+</html>

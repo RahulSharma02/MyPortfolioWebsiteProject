@@ -1,0 +1,215 @@
+{% extends 'matrialize.html' %}
+{% block content %}
+<!--   corrousal starts here-->
+
+<!--<div class="carousel carousel-slider center">-->
+<!--    <div class="carousel-fixed-item center">-->
+<!--        <div class="input-field center">-->
+<!--            <button class="btn">Explore</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="carousel-item red white-text" href="#one!">-->
+<!--        <img src="https://source.unsplash.com/1900x700/?coder,programmer" alt="">-->
+
+<!--    </div>-->
+<!--    <div class="carousel-item amber white-text" href="#two!">-->
+<!--        <img src="https://source.unsplash.com/1900x700/?apple computers,programmer" alt="">-->
+
+<!--    </div>-->
+<!--    <div class="carousel-item green white-text" href="#three!">-->
+<!--        <img src="https://source.unsplash.com/1900x700/?data,programmer" alt="">-->
+
+<!--    </div>-->
+
+<!--</div>-->
+
+<!--   corrousal ends here-->
+
+<!--   sections under corousal-->
+<section class="container-section" style="margin-top:20px">
+<div class="row">
+
+    <div class="col s12 l4 mt2">
+        <img src="https://source.unsplash.com/500x300/?programmer" alt="" class="responsive-img material-boxed hoverable">
+    </div>
+    <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4">Hello,</h2>
+        <p class="textinit">I'm Rahul. I am a web developer. I create Websites for companies and small businesses.</p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col s12 l4 push-l7 offset-l1">
+        <img src="https://source.unsplash.com/500x300/?Django"  alt="" class="responsive-img material-boxed hoverable">
+    </div>
+    <div class="col s12 l6 pull-l5 right-align offset-l1">
+        <h2 class="indigo-text text-darken-4">Education and Internships </h2>
+        <p class="textinit"> I am a B.tech Graduate from Rayat Bahra Hoshiarpur(2020).I was doing an internship With Rex Web
+            Solutions in ReactJS.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col s12 l4">
+        <img src="https://source.unsplash.com/500x300/?ReactJS" alt="" class="responsive-img material-boxed hoverable">
+    </div>
+    <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4">Proficient In</h2>
+        <p  class="textinit">Frontend  and Backend with the help of Django.
+            Able to make REST API's using Django.</p>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- parallax   -->
+<div class="parallax-container">
+    <div class="parallax">
+
+        <img src="https://source.unsplash.com/1900x1800/?Computers"  alt="" class="responsive-img">
+    </div>
+</div>
+
+<section class="container section" id="services">
+    <div class="row">
+        <div class="col s12 l6">
+            <h2 class=" indigo-text text-darken-4" style="margin-top:0">Interests</h2>
+            <p class="interests">Creating new websites and learning new Technologies.<span>(Coding)</span> </p>
+            <p class="interests">Learn new concepts, experiences and philosphies from books and apply them.<span>(Reading)</span></p>
+            <p class="interests">I find very interesting to know. How humans behave.<span>(Physchology) </span></p>
+            <p class="interests">To be able to make an impact and money onw must master two skills.First one is mentioned in first line.
+                Second one is<span>(Sales) </span></p>
+        </div>
+        <div class="col s12 l6 offset-12">
+            <ul class="tabs">
+
+                <li class="tab col s6">
+                    <a href="#PhotoGraphy" class="indigo-text text-darken-4 ">Technical Skills</a>
+                </li>
+
+                <li class="tab col s6">
+                    <a href="#Editing" class="indigo-text text-darken-4">Interpersonal Skills</a>
+                </li>
+            </ul>
+
+            <div class="col s12" id="PhotoGraphy">
+                <p class="flow-text indigo-text text-darken-4">Techincal Skills</p>
+                <p class="interests">FrontEnd: Html, CSS, Materilize, Bootstrap, Javascript, Jquery, ReactJs.</p>
+                <p class="interests">Backend: Django, Ajax.</p>
+                <p class="interests">Other: Python, C++. </p>
+
+            </div>
+
+            <div class="col s12" id="Editing">
+                <p class="flow-text indigo-text text-darken-4">Interpersonal Skills</p>
+                <p class="interests">Can adapt to new and different conditions</p>
+                <p class="interests">Productivity gets levereged when working in teams.</p>
+                <p class="interests">Can communicate effectively. </p>
+                <p class="interests">Works in 90/90/10 and 60/60/10 Productivity cycles. </p>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- parallax   -->
+<div class="parallax-container">
+    <div class="parallax">
+
+        <img src="https://source.unsplash.com/1900x1800/?Websites " alt="" class="responsive-img">
+    </div>
+</div>
+
+<!-- contact form -->
+
+<section class="container section" id="contact">
+    <div class="row">
+        <div class="col s12 l5">
+
+            <h2 class="flow-text indigo-text text-darken-4">Open to suggestions</h2>
+            <p class="interests" >Get in touch with a mail.</p>
+            <p class="interests">Tell me about your experience.</p>
+
+            <p class="interests">Join the newsletter.</p>
+            <p class="interests">Follow me on social media platforms</p>
+        </div>
+
+
+        <div class="col s12 l5 offset-l2">
+            <form action="" method="post">
+                {% csrf_token %}
+
+
+                 <div class="input-field">
+                    <i class="material-icons prefix">Name</i>
+                    <input type="text" id="name" name="name"/>
+                    <label for="name">Your Name</label>
+                </div>
+
+
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" id="email" name="email"/>
+                    <label for="email">Your Email</label>
+                </div>
+
+
+
+                <div class="input-field">
+                    <i class="material-icons prefix ">Suggestion</i>
+                    <textarea class="materialize-textarea" id="message" name="suggestions"></textarea>
+                    <label for="message">Your Suggestion</label>
+                </div>
+<!--                <div class="input-field">-->
+<!--                    &lt;!&ndash; <i class="material-icons prefix ">message</i> &ndash;&gt;-->
+<!--                    <input type="text" class="datepicker" id="date">-->
+<!--                    <label for="date">Pick your Date</label>-->
+<!--                </div>-->
+
+<!--                <div class="input-field">-->
+<!--                    <p> Choose the type</p>-->
+
+<!--                    <p>-->
+<!--                        <label>-->
+<!--                            <input type="checkbox" name="" id="">-->
+<!--                            <span>Video Consulting</span>-->
+<!--                        </label>-->
+<!--                    </p>-->
+
+<!--                    <p>-->
+<!--                        <label>-->
+<!--                            <input type="checkbox" name="" id="">-->
+<!--                            <span>Text Consulting</span>-->
+<!--                        </label>-->
+<!--                    </p>-->
+
+<!--                    <p>-->
+<!--                        <label>-->
+<!--                            <input type="checkbox" name="" id="">-->
+<!--                            <span>Voice Call Consulting</span>-->
+<!--                        </label>-->
+<!--                    </p>-->
+
+                    <div class="input-field center">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+
+{% endblock content %}

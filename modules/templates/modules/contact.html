@@ -1,0 +1,89 @@
+{% extends 'matrialize.html' %}
+{% block content %}
+<body style="background-color:#254665">
+   <div class = "container">
+      <div class="contacthead">
+   <h1 class="flow-text white-text text-darken-10 center-align hr" style="font-size:5vh;">Contact Form</h1>
+         <p class="contacthead flow-text white-text text-darken-10">If you have a question or want to work together!</p>
+       </div>
+<div class = "row">
+         <form class = "col s12" method="post">
+            {% csrf_token %}
+            <div class = "row">
+               <div class = "input-field col s12">
+                  <i class = "material-icons prefix">account_circle</i>
+                  <input placeholder = "Your Name" value = "" id = "name"
+                     type = "text" class = "active validate" required name="name" />
+                  <label for = "name">Name</label>
+               </div>
+
+
+            </div>
+
+            <div class = "row">
+               <div class = "input-field col s12">
+                  <input placeholder = "Email" id = "email" type = "email"
+                     class = "validate" name="email">
+                  <label for = "email">Email</label>
+               </div>
+            </div>
+
+
+            <div class = "row">
+               <div class = "input-field col s12">
+                  <input placeholder = "Phone" id = "phone" type = "number"
+                     class = "validate" name="phone">
+                  <label for = "phone">Mobile no</label>
+               </div>
+            </div>
+
+
+
+            <div class = "row">
+               <div class = "input-field col s12">
+                  <i class = "material-icons prefix">mode_edit</i>
+                  <textarea id = "address" class = "materialize-textarea" name="address"></textarea>
+                  <label for = "address">Address</label>
+               </div>
+            </div>
+
+            <div class = "row">
+               <div class = "input-field col s12">
+                  <input placeholder = "Comments " id = "comments"
+                     type = "text" name="comments" />
+                  <label for = "comments">Comments</label>
+               </div>
+            </div>
+
+<!--            <div class = "row">-->
+<!--               <p>Purpose for contacting</p>-->
+<!--               <div class = "input-field col s12">-->
+<!--                  <p>-->
+<!--                     <input id = "job" type = "checkbox" checked = "" />-->
+<!--                     <label for = "Job Offer">Job Offer</label>-->
+<!--                  </p>-->
+
+<!--                  <p>-->
+<!--                     <input id = "Independent Project" type = "checkbox" class = "filled-in" />-->
+<!--                     <label for = "Independent Project">Independent Project</label>-->
+<!--                  </p>-->
+
+<!--                  <p>-->
+<!--                     <input id = "Other" type = "checkbox"  />-->
+<!--                     <label for = "Other">Other</label>-->
+<!--                  </p>-->
+<!--               </div>-->
+<!--            </div>-->
+
+            <div class = "row">
+               <div class = "input-field col s12">
+                   <div class="input-field center">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+               </div>
+            </div>
+         </form>
+        </div>
+      </div>
+   </body>
+{% endblock content %}
