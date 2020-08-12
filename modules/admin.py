@@ -6,3 +6,5 @@ from.models import Review, Contact
 admin.site.register(Review)
 
 admin.site.register(Contact)
+
+# admin.site.register(Post)
