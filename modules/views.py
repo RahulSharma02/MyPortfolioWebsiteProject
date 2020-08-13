@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Review, Contact
 from django.contrib.auth.models import User
-from django.views.generic import (
-    ListView,
-    DetailView,
-)
+# from django.views.generic import (
+#     ListView,
+#     DetailView,
+# )
 
 
 # Create your views here.
